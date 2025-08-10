@@ -33,31 +33,31 @@ const TrackSection: React.FC<TrackSectionProps> = ({ type }) => {
       <div/>
       
       {/* Content */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center p-8 lg:p-16">
-        <div className={`mb-8 p-4 rounded-full ${isTech ? 'bg-tech-primary/20' : 'bg-art-primary/20'} backdrop-blur-sm`}>
+      <div className="relative h-full flex flex-col justify-center items-center text-center p-4 sm:p-8 lg:p-16"> {/* Responsive padding */}
+        <div className={`mb-6 p-3 rounded-full ${isTech ? 'bg-tech-primary/20' : 'bg-art-primary/20'} backdrop-blur-sm`}>
           {isTech ? (
-            <Eye className={`w-12 h-12 ${isTech ? 'text-tech-accent' : 'text-art-accent'}`} />
+            <Eye className={`w-10 h-10 ${isTech ? 'text-tech-accent' : 'text-art-accent'}`} />
           ) : (
-            <Palette className={`w-12 h-12 text-art-accent`} />
+            <Palette className={`w-10 h-10 text-art-accent`} />
           )}
         </div>
         
-        <h2 className={`text-3xl lg:text-4xl xl:text-5xl font-orbitron font-bold mb-6 ${isTech ? 'text-tech-glow' : 'text-art-glow'}`}>
+        <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-orbitron font-bold mb-4 ${isTech ? 'text-tech-glow' : 'text-art-glow'}`}>
           Track {isTech ? '1' : '2'}
         </h2>
         
-        <h3 className="text-xl lg:text-2xl font-inter font-semibold mb-6 text-foreground">
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-inter font-semibold mb-4 text-foreground">
           {isTech ? 'Computer Vision Hackathon' : 'Poster Making Competition'}
         </h3>
         
-        <p className="text-lg lg:text-xl  max-w-lg mb-8 leading-relaxed">
+        <p className="text-base sm:text-lg lg:text-xl max-w-xs sm:max-w-lg mb-6 leading-relaxed">
           {isTech 
             ? "Dive into the world of computer vision! Solve real-world challenges in healthcare, security, environment, and more using cutting-edge AI algorithms."
             : "Unleash your imagination! Craft stunning AI-generated posters with the power of prompt engineering and creativity."
           }
         </p>
         
-        <div className="space-y-4 text-sm lg:text-base ">
+        <div className="space-y-3 text-xs sm:text-sm lg:text-base ">
           {isTech ? (
             <>
               <div className="flex items-center justify-center space-x-2">
