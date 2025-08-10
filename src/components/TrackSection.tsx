@@ -36,7 +36,7 @@ const TrackSection: React.FC<TrackSectionProps> = ({ type }) => {
       <div className="relative h-full flex flex-col justify-center items-center text-center p-4 sm:p-8 lg:p-16"> {/* Responsive padding */}
         <div className={`mb-6 p-3 rounded-full ${isTech ? 'bg-tech-primary/20' : 'bg-art-primary/20'} backdrop-blur-sm`}>
           {isTech ? (
-            <Eye className={`w-10 h-10 ${isTech ? 'text-tech-accent' : 'text-art-accent'}`} />
+            <Eye className={`w-10 h-10 ${isTech ? 'text-tech-accent' : 'text-art-accent'} hidden sm:inline`} /> // Eye hidden on mobile, visible on sm+
           ) : (
             <Palette className={`w-10 h-10 text-art-accent`} />
           )}
